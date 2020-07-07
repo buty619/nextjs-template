@@ -1,6 +1,6 @@
 ![inhouse_logo](/public/images/inHouse.png)
 
-# inHouse Dev
+# 🏠 inHouse Dev
 
 ## Templeate to create Nextjs react app with
 
