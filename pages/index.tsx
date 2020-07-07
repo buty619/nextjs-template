@@ -34,6 +34,7 @@ const Home = ({ preLoadData }) => (
         <li>use of getStaticProps</li>
         <li>fetch to api</li>
         <li>husky for git flow</li>
+        <li>prettier</li>
       </ul>
       <h3>
         <Link href="/posts/first-post">Go to example</Link>

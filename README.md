@@ -15,6 +15,7 @@
 - use of getStaticProps
 - fetch to api
 - husky for git flow
+- prettier
 
 ---
 
@@ -37,7 +38,9 @@ npm run dev
 ### Aditional INFO
 
 1. to make type check use `npm run typeCheck`
-2. to see state handle, use of classnames and manage of routs please go to /posts/first-post
+2. to make prettier check use `npm run prettier`
+3. to male prettier fix use `npm run prettier:fix`
+4. to see state handle, use of classnames and manage of routs please go to /posts/first-post
 
 ---
 
