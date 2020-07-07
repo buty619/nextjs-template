@@ -1,31 +1,34 @@
 {
-	"name": "learn-starter",
-	"version": "0.1.0",
-	"private": true,
-	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start",
-		"typeCheck": "tsc --noEmit -skipLibCheck && echo ✔️ PASSED Types"
-	},
-	"husky": {
-		"hooks": {
-			"pre-push": "npm run typeCheck"
-		}
-	},
-	"dependencies": {
-		"classnames": "^2.2.6",
-		"next": "9.3.5",
-		"node-fetch": "^2.6.0",
-		"node-sass": "^4.14.1",
-		"react": "16.13.1",
-		"react-dom": "16.13.1",
-		"sass-loader": "^9.0.1"
-	},
-	"devDependencies": {
-		"@types/node": "^14.0.18",
-		"@types/react": "^16.9.41",
-		"husky": "^4.2.5",
-		"typescript": "^3.9.6"
-	}
+  "name": "learn-starter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typeCheck": "tsc --noEmit -skipLibCheck && echo ✔️ PASSED Types",
+    "prettier": "prettier --list-different pages/**/*.{js,ts,tsx,jsx,scss} && echo ✔️ PASSED Prettier || echo \nPlease fix code formatting by running:\nnpm run prettier:fix\n; exit 1",
+    "prettier:fix": "prettier --write pages/**/*.{js,ts,tsx,jsx,scss} && prettier --write components/**/*.{js,ts,tsx,jsx,scss}"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run typeCheck && npm run prettier"
+    }
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "next": "9.3.5",
+    "node-fetch": "^2.6.0",
+    "node-sass": "^4.14.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "sass-loader": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.18",
+    "@types/react": "^16.9.41",
+    "husky": "^4.2.5",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.6"
+  }
 }
