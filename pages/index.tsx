@@ -35,9 +35,46 @@ const Home = ({ preLoadData }) => (
         <li>fetch to api</li>
         <li>husky for git flow</li>
         <li>prettier</li>
+        <li>
+          example of how to manage dinamic routes
+          <ul>
+            <li>
+              <Link href="/dinamic-route/bulbasaur">
+                <a>Go to bulbasaur (pages/dinamic-route/pokeCard)</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/dinamic-route/ivysaur">
+                <a>Go to ivysaur (pages/dinamic-route/pokeCard)</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/dinamic-route/venusaur">
+                <a>Go to bulbasaur (pages/dinamic-route/pokeCard)</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/dinamic-route/charmander">
+                <a>Go to charmander (pages/dinamic-route/pokeCard)</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/dinamic-route/charmeleon">
+                <a>Go to charmeleon (pages/dinamic-route/pokeCard)</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/dinamic-route/charizard">
+                <a>Go to charizard (pages/dinamic-route/pokeCard)</a>
+              </Link>
+            </li>
+          </ul>
+        </li>
       </ul>
       <h3>
-        <Link href="/posts/first-post">Go to example</Link>
+        <Link href="/posts/first-post">
+          <a>Go to example</a>
+        </Link>
       </h3>
       <section>
         <h1 className={utilStyles.heading2Xl}>

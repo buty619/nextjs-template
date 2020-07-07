@@ -4,7 +4,8 @@
 
 ## Templeate to create Nextjs react app with
 
-- Next Js
+- Next Js}
+- example of handle dinamic routes
 - TypeScript
 - Type Check (`npm run typeCheck`)
 - Global Types definition
