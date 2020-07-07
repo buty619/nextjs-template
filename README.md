@@ -2,7 +2,7 @@
 
 # inHouse Dev
 
-## Templeate to create Nextjs react app with :
+## Templeate to create Nextjs react app with
 
 - Next Js
 - TypeScript
@@ -14,12 +14,30 @@
 - set global utils css
 - use of getStaticProps
 - fetch to api
+- husky for git flow
 
-### Aditional INFO:
+---
 
-1. to run use `npm run dev`
-2. to make type check use `npm run typeCheck`
-3. to see state handle, use of classnames and manage of routs please go to /posts/first-post
+### Instalation
+
+```
+git clone https://github.com/buty619/nextjs-template.git my-new-project
+cd my-new-project
+npm install
+```
+
+### Develop
+
+```
+npm run dev
+```
+
+---
+
+### Aditional INFO
+
+1. to make type check use `npm run typeCheck`
+2. to see state handle, use of classnames and manage of routs please go to /posts/first-post
 
 ---
 

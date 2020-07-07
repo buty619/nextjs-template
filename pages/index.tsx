@@ -33,6 +33,7 @@ const Home = ({ preLoadData }) => (
 				<li>set global utils css</li>
 				<li>use of getStaticProps</li>
 				<li>fetch to api</li>
+				<li>husky for git flow</li>
 			</ul>
 			<h3>
 				<Link href="/posts/first-post">Go to example</Link>

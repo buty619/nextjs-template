@@ -8,6 +8,11 @@
 		"start": "next start",
 		"typeCheck": "tsc --noEmit -skipLibCheck && echo ✔️ PASSED Types"
 	},
+	"husky": {
+		"hooks": {
+			"pre-push": "npm run typeCheck"
+		}
+	},
 	"dependencies": {
 		"classnames": "^2.2.6",
 		"next": "9.3.5",
@@ -20,6 +25,7 @@
 	"devDependencies": {
 		"@types/node": "^14.0.18",
 		"@types/react": "^16.9.41",
+		"husky": "^4.2.5",
 		"typescript": "^3.9.6"
 	}
 }
