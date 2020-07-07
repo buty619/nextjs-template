@@ -2,7 +2,7 @@
 
 # inHouse Dev
 
-### Templeate to create Nextjs react app whit :
+## Templeate to create Nextjs react app with :
 
 - Next Js
 - TypeScript
@@ -18,9 +18,10 @@
 ### Aditional INFO:
 
 1. to run use `npm run dev`
-2. to see state handle, use of classnames and manage of routs please go to /posts/first-post
+2. to make type check use `npm run typeCheck`
+3. to see state handle, use of classnames and manage of routs please go to /posts/first-post
 
-### Important Next js Docs
+## Important Next js Docs
 
 **Two Forms of Pre-rendering**
 
