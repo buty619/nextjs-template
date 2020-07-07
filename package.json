@@ -12,7 +12,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run typeCheck && npm run prettier && echo \n🏠✔️ PUSH CHECKING PASSED ✔️🏠\n || echo \nPlease fix falling checks\n; exit 1"
+      "pre-push": "npm run typeCheck && npm run prettier && echo \n 🏠 ✔️ PUSH CHECKING PASSED ✔️ 🏠 \n || echo \nPlease fix falling checks\n; exit 1"
     }
   },
   "dependencies": {
