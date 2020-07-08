@@ -11,6 +11,7 @@ import styles from './PokeCard.module.scss';
 
 // Types
 import { pokeType } from '../../global';
+import { GetStaticProps } from 'next';
 
 const pokePaths = [
   { name: 'bulbasaur', id: 1 },
@@ -21,15 +22,20 @@ const pokePaths = [
   { name: 'charizard', id: 6 },
 ];
 
+// TODO: handle GetStaticPaths export const getStaticPaths = (): GetStaticPaths<pokePath>
 export const getStaticPaths = () => {
-  const paths = pokePaths.map(({ name }) => ({ params: { pokeId: name } }));
+  const paths = pokePaths.map(({ name }) => ({
+    params: { pokeId: name },
+  }));
   return {
     paths,
     fallback: false,
   };
 };
 
-export const getStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps<{
+  preLoadPokeData: pokeType;
+}> = async ({ params }) => {
   const pokeId = pokePaths.find((pokemon) => pokemon.name === params.pokeId);
   const pokemon = await fetch(
     `https://pokeapi.co/api/v2/pokemon-form/${pokeId.id}`,

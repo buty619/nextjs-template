@@ -5,10 +5,13 @@ import { siteTitle } from '../components/Layout/Layout';
 import Link from 'next/link';
 import fetch from 'node-fetch';
 
+// Types
+import { GetStaticProps } from 'next';
+
 // Styles
 import utilStyles from '../styles/utils.module.scss';
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps<{ preLoadData: {} }> = async () => {
   const preLoadData = await fetch(
     'https://pokeapi.co/api/v2/pokemon-form/25',
   ).then((res) => res.json());
