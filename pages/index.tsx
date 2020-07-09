@@ -30,6 +30,13 @@ interface Props {
 const Home: React.FC<Props> = ({ preLoadData }) => (
   <Layout home>
     <Head>
+      <link rel="manifest" href="/manifest.json" />
+      <link rel="apple-touch-icon" href="/favicon.ico"></link>
+      <meta name="theme-color" content="#000000" />
+      <meta
+        name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+      />
       <title>{siteTitle}</title>
     </Head>
     <section className={utilStyles.headingMd}>
