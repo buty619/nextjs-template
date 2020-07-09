@@ -3,7 +3,12 @@ declare module 'remark-html' {
   export default html;
 }
 
-export interface pokeType {
+export interface PokeType {
   name: string;
   img: string;
+}
+
+export interface PreLoadData {
+  name: string;
+  sprites: { front_default: string };
 }

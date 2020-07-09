@@ -1,3 +1,5 @@
+import React from 'react';
+
 // Components
 import Head from 'next/head';
 import Layout from '../components/Layout';
@@ -7,18 +9,25 @@ import fetch from 'node-fetch';
 
 // Types
 import { GetStaticProps } from 'next';
+import { PreLoadData } from '../global';
 
 // Styles
 import utilStyles from '../styles/utils.module.scss';
 
-export const getStaticProps: GetStaticProps<{ preLoadData: {} }> = async () => {
+export const getStaticProps: GetStaticProps<{
+  preLoadData: PreLoadData;
+}> = async () => {
   const preLoadData = await fetch(
     'https://pokeapi.co/api/v2/pokemon-form/25',
   ).then((res) => res.json());
   return { props: { preLoadData } };
 };
 
-const Home = ({ preLoadData }) => (
+interface Props {
+  preLoadData: PreLoadData;
+}
+
+const Home: React.FC<Props> = ({ preLoadData }) => (
   <Layout home>
     <Head>
       <title>{siteTitle}</title>
@@ -38,6 +47,7 @@ const Home = ({ preLoadData }) => (
         <li>fetch to api</li>
         <li>husky for git flow</li>
         <li>prettier</li>
+        <li>eslint for TypeScript</li>
         <li>
           example of how to manage dinamic routes
           <ul>

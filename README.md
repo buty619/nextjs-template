@@ -4,7 +4,7 @@
 
 ## Templeate to create Nextjs react app with
 
-- Next Js}
+- Next Js
 - example of handle dinamic routes
 - TypeScript
 - Type Check (`npm run typeCheck`)
@@ -17,6 +17,7 @@
 - fetch to api
 - husky for git flow
 - prettier
+- eslint for TypeScript (`npm run lint`)
 
 ---
 
@@ -40,8 +41,10 @@ npm run dev
 
 1. to make type check use `npm run typeCheck`
 2. to make prettier check use `npm run prettier`
-3. to male prettier fix use `npm run prettier:fix`
-4. to see state handle, use of classnames and manage of routs please go to /posts/first-post
+3. to make prettier fix use `npm run prettier:fix`
+4. to make prettier fix use `npm run lint`
+5. to see state handle, use of classnames and manage of routs please go to `/pages/posts/first-post/FirstPost.tsx`
+6. to see dinamic routes handle please go to `/pages/dinamic-route/[pokeId].ts`
 
 ---
 
@@ -73,4 +76,4 @@ On the other hand, Static Generation is **not** a good idea if you cannot pre-re
 
 In that case, you can use **Server-Side Rendering**. It will be slower, but the pre-rendered page will always be up-to-date. Or you can skip pre-rendering and use client-side JavaScript to populate data.
 
-**Lets Rock**
+# Lets Rock

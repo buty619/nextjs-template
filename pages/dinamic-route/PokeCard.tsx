@@ -10,7 +10,7 @@ import utilStyles from '../../styles/utils.module.scss';
 import styles from './PokeCard.module.scss';
 
 // Types
-import { pokeType } from '../../global';
+import { PokeType } from '../../global';
 import { GetStaticProps } from 'next';
 
 const pokePaths = [
@@ -22,8 +22,8 @@ const pokePaths = [
   { name: 'charizard', id: 6 },
 ];
 
-// TODO: handle GetStaticPaths export const getStaticPaths = (): GetStaticPaths<pokePath>
-export const getStaticPaths = () => {
+// TODO: handle GetStaticPaths type like: export const "getStaticPaths = (): GetStaticPaths<pokePath> => ..."
+export const getStaticPaths = (): unknown => {
   const paths = pokePaths.map(({ name }) => ({
     params: { pokeId: name },
   }));
@@ -34,7 +34,7 @@ export const getStaticPaths = () => {
 };
 
 export const getStaticProps: GetStaticProps<{
-  preLoadPokeData: pokeType;
+  preLoadPokeData: PokeType;
 }> = async ({ params }) => {
   const pokeId = pokePaths.find((pokemon) => pokemon.name === params.pokeId);
   const pokemon = await fetch(
@@ -48,7 +48,7 @@ export const getStaticProps: GetStaticProps<{
 };
 
 interface Props {
-  preLoadPokeData: pokeType;
+  preLoadPokeData: PokeType;
 }
 
 const firstPost: React.FC<Props> = ({ preLoadPokeData }) => {

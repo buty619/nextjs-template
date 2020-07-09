@@ -8,11 +8,13 @@ import classnames from 'classnames';
 // Styles
 import styles from './FirstPost.module.scss';
 
-const firstPost = () => {
-  const [counter, setCounter] = React.useState(0);
-  const handleIncrease = () => {
+const FirstPost: React.FC = () => {
+  const [counter, setCounter] = React.useState<number>(0);
+
+  const handleIncrease = React.useCallback(() => {
     setCounter(counter + 1);
-  };
+  }, [counter]);
+
   return (
     <Layout>
       <Head>
@@ -26,4 +28,5 @@ const firstPost = () => {
     </Layout>
   );
 };
-export default firstPost;
+
+export default FirstPost;
