@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "typeCheck": "tsc --noEmit -skipLibCheck && echo ✔️ PASSED Types",
-    "prettier": "prettier --list-different pages/**/*.{js,ts,tsx,jsx,scss} && echo ✔️ PASSED Prettier || echo \nPlease fix code formatting by running:\nnpm run prettier:fix\n; exit 1",
-    "prettier:fix": "prettier --write pages/**/*.{js,ts,tsx,jsx,scss} && prettier --write components/**/*.{js,ts,tsx,jsx,scss}",
+    "prettier": "prettier --list-different pages/**/*.{js,ts,tsx,jsx,scss} components/**/*.{js,ts,tsx,jsx,scss} && echo ✔️ PASSED Prettier || echo \nPlease fix code formatting by running:\nnpm run prettier:fix\n; exit 1",
+    "prettier:fix": "prettier --write pages/**/*.{js,ts,tsx,jsx,scss}  components/**/*.{js,ts,tsx,jsx,scss} && prettier --write components/**/*.{js,ts,tsx,jsx,scss}",
     "lint": "eslint --ext .js,.ts,.tsx,.jsx pages/ components/ && echo '✔️ PASSED ESLint' || echo Please fix code formatting by running: npm run lint:fix",
     "lint:fix": "eslint --ext .js,.ts,.tsx,.jsx src/ --fix"
   },

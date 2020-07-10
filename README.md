@@ -18,6 +18,7 @@
 - husky for git flow
 - prettier
 - eslint for TypeScript (`npm run lint`)
+- PWA
 
 ---
 

@@ -55,6 +55,7 @@ const Home: React.FC<Props> = ({ preLoadData }) => (
         <li>husky for git flow</li>
         <li>prettier</li>
         <li>eslint for TypeScript</li>
+        <li>PWA</li>
         <li>
           example of how to manage dinamic routes
           <ul>
