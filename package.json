@@ -11,7 +11,7 @@
     "prettier:fix": "prettier --write ./pages/**/*.{ts,tsx,scss}  ./components/**/*.{ts,tsx,scss} && prettier --write components/**/*.{ts,tsx,scss}",
     "lint": "eslint --ext .js,.ts,.tsx,.jsx pages/ components/ && echo '✔️ PASSED ESLint' || (echo Please fix code formatting by running: 'npm run lint:fix' && exit)",
     "lint:fix": "eslint --ext .js,.ts,.tsx,.jsx src/ --fix",
-    "test": "(npm run typeCheck && npm run prettier && npm run lint) && echo 🏠 ✔️ PUSH CHECKING PASSED ✔️ 🏠 || echo ❌ PLEASE FIX FAILING CHECKS ❌"
+    "test": "(npm run typeCheck && npm run prettier && npm run lint) && echo 🏠 ✔️ PUSH CHECKING PASSED ✔️ 🏠 || (echo ❌ PLEASE FIX FAILING CHECKS ❌ && exit)"
   },
   "husky": {
     "hooks": {
