@@ -26,7 +26,11 @@
     "node-sass": "^4.14.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "sass-loader": "^9.0.1"
+    "sass-loader": "^9.0.1",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "@reduxjs/toolkit": "^1.4.0"
   },
   "devDependencies": {
     "@types/node": "^14.0.18",
@@ -42,6 +46,10 @@
     "eslint-plugin-react-hooks": "^4.0.6",
     "husky": "^4.2.5",
     "prettier": "^2.0.5",
-    "typescript": "^3.9.6"
+    "typescript": "^3.9.6",
+    "@types/react-redux": "^7.1.9",
+    "@types/redux": "^3.6.0",
+    "@types/redux-mock-store": "^1.0.2",
+    "redux-mock-store": "^1.5.4"
   }
 }

@@ -1,5 +1,9 @@
 import * as React from 'react';
 
+// Redux
+import { useDispatch } from 'react-redux';
+import { setLanguage } from '../../../actions/language.actions';
+
 // Components
 import Head from 'next/head';
 import Layout from '../../../components/Layout';
@@ -9,11 +13,14 @@ import classnames from 'classnames';
 import styles from './FirstPost.module.scss';
 
 const FirstPost: React.FC = () => {
+  const dispach = useDispatch();
+
   const [counter, setCounter] = React.useState<number>(0);
 
   const handleIncrease = React.useCallback(() => {
     setCounter(counter + 1);
-  }, [counter]);
+    dispach(setLanguage('eng'));
+  }, [counter, dispach]);
 
   return (
     <Layout>

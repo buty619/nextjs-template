@@ -12,3 +12,7 @@ export interface PreLoadData {
   name: string;
   sprites: { front_default: string };
 }
+
+export type AnyData = Record<string, unknown> | { example: string };
+
+export type Language = 'eng' | 'spa';

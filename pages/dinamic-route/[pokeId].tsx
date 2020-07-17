@@ -13,6 +13,11 @@ import styles from './PokeCard.module.scss';
 import { PokeType } from '../../global';
 import { GetStaticProps } from 'next';
 
+// Redux
+import { useSelector } from 'react-redux';
+import { State } from '../../reducers/root.reducer';
+import { Language } from '../../global';
+
 const pokePaths = [
   { name: 'bulbasaur', id: 1 },
   { name: 'ivysaur', id: 2 },
@@ -40,18 +45,26 @@ export const getStaticProps: GetStaticProps<{
   const pokemon = await fetch(
     `https://pokeapi.co/api/v2/pokemon-form/${pokeId.id}`,
   ).then((res) => res.json());
+
   const preLoadPokeData = {
     name: pokemon.name,
     img: pokemon.sprites.front_default,
   };
-  return { props: { preLoadPokeData } };
+  return {
+    props: {
+      preLoadPokeData,
+    },
+  };
 };
 
 interface Props {
   preLoadPokeData: PokeType;
 }
 
-const firstPost: React.FC<Props> = ({ preLoadPokeData }) => {
+const PokeId: React.FC<Props> = ({ preLoadPokeData }) => {
+  const getReduxState = useSelector<State, Language>(
+    (state) => state.language.data,
+  );
   return (
     <Layout>
       <Head>
@@ -59,6 +72,7 @@ const firstPost: React.FC<Props> = ({ preLoadPokeData }) => {
       </Head>
       <section className={styles.container}>
         <h2 className={utilStyles.heading2Xl}>{preLoadPokeData.name}</h2>
+        <p>handle redux state: {getReduxState}</p>
         <img
           src={preLoadPokeData.img}
           alt={preLoadPokeData.name}
@@ -68,4 +82,4 @@ const firstPost: React.FC<Props> = ({ preLoadPokeData }) => {
     </Layout>
   );
 };
-export default firstPost;
+export default PokeId;
