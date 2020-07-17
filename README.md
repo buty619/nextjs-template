@@ -19,7 +19,7 @@
 - prettier
 - eslint for TypeScript (`npm run lint`)
 - PWA
-- Redux (`not supporting share sate in dinamic Routes`)
+- Redux (`supporting share sate in dinamic Routes via redux-persist`)
 
 ---
 

@@ -2,9 +2,10 @@ import {
   createStore,
   applyMiddleware,
   Store,
-  PreloadedState,
   compose as rawCompose,
 } from 'redux';
+
+import { persistStore } from 'redux-persist';
 
 // Middleware
 import thunk from 'redux-thunk';
@@ -25,10 +26,39 @@ const compose =
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ||
   rawCompose;
 
-const createAppStore = (preloadState?: PreloadedState<State>): AppStore => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const createAppStore = (initialState: State): any => {
+  let store;
+
   const middleware = [thunk];
+
   const enhancer = compose(applyMiddleware(...middleware));
-  return createStore(rootReducer, preloadState, enhancer);
+
+  const isClient = typeof window !== 'undefined';
+
+  if (isClient) {
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const { persistReducer } = require('redux-persist');
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const storage = require('redux-persist/lib/storage').default;
+
+    const persistConfig = {
+      key: 'root',
+      storage,
+    };
+
+    store = createStore(
+      persistReducer(persistConfig, rootReducer),
+      initialState,
+      enhancer,
+    );
+
+    store.__PERSISTOR = persistStore(store);
+  } else {
+    store = createStore(rootReducer, initialState, enhancer);
+  }
+
+  return store;
 };
 
 export default createAppStore;
