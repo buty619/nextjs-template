@@ -1,52 +1,27 @@
-@mixin font($font-family, $font-file) {
-  @font-face {
-    font-family: $font-family;
-    src: url($font-file) format('opentype');
-    font-weight: normal;
-    font-style: normal;
-  }
-}
-
-@include font('PoppinsBold', '../public/fonts/Poppins-Bold.ttf');
-
-@include font('PoppinsExtraBold', '../public/fonts/Poppins-ExtraBold.ttf');
-
-@include font('PoppinsLight', '../public/fonts/Poppins-Light.ttf');
-
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: PoppinsLight, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  line-height: 1.6;
-  font-size: 18px;
+	padding: 0;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	line-height: 1.6;
+	font-size: 18px;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 a {
-  color: #0070f3;
-  text-decoration: none;
+	color: #0070f3;
+	text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 img {
-  max-width: 100%;
-  display: block;
-}
-
-input {
-  font-family: PoppinsLight, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  &::placeholder {
-    font-family: PoppinsLight, -apple-system, BlinkMacSystemFont, Segoe UI,
-      Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-      sans-serif;
-  }
+	max-width: 100%;
+	display: block;
 }
